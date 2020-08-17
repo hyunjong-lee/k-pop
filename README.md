@@ -9,7 +9,7 @@
 # Introduction
 
 - This is a hobby project and trying to make a good project.
-- The aim of this project is to implement top-k algorithms.
+- The aim of this project is to implement approximate top-k algorithms in scale.
 - For the practical performance, trying to make the best use of C++ language.
 - If you feel some interests in this project, fork and pull request with your ability in C++.
 

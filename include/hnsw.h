@@ -5,6 +5,7 @@
 #include <set>
 
 #include "base/similar.h"
+#include "base/layer.h";
 
 namespace kpop {
 
