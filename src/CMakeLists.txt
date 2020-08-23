@@ -1,9 +1,22 @@
-cmake_minimum_required(VERSION 3.2)
-project(divider)
+set(
+    HEADER_LIST
+    "${kpop_SOURCE_DIR}/include/hnsw/hnsw.h"
+)
 
-# add_subdirectory(division)
-set(SOURCE_FILES main.cpp)
+add_library(
+    kpoplib
+    hnsw.cpp
+    ${HEADER_LIST}
+)
 
-add_executable(divider ${SOURCE_FILES})
-# target_link_libraries(divider division)
-install(TARGETS divider DESTINATION ${DIVISIBLE_INSTALL_BIN_DIR})
+target_include_directories(
+    kpoplib
+    PUBLIC
+    ../include
+)
+
+source_group(
+    TREE "${PROJECT_SOURCE_DIR}/include"
+    PREFIX "Header Files"
+    FILES ${HEADER_LIST}
+)

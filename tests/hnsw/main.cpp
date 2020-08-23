@@ -5,9 +5,14 @@
 
 namespace
 {
-    TEST(FactorialTest, Zero)
+    TEST(FailTest, Zero)
     {
         EXPECT_EQ(1, 0);
+    }
+
+    TEST(PassTest, Zero)
+    {
+        EXPECT_EQ(1, 1);
     }
 }
 

@@ -6,12 +6,15 @@ if(WIN32)
     set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} /NODEFAULTLIB:msvcrtd")
 endif()
 
-ADD_EXECUTABLE(test_hnsw ${SRCS})
+add_executable(test_hnsw ${SRCS})
 
-TARGET_LINK_LIBRARIES(test_hnsw
+target_link_libraries(
+    test_hnsw
     libgtest
     libgmock
 )
 
-add_test(NAME test_hnsw
-         COMMAND test_hnsw)
+add_test(
+    NAME test_hnsw
+    COMMAND test_hnsw
+)
